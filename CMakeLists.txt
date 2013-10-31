@@ -3,7 +3,8 @@ project(object_recognition_tabletop)
 
 find_package(catkin REQUIRED ecto ecto_pcl ecto_ros genmsg household_objects_database household_objects_database_msgs
                              moveit_core object_recognition_core object_recognition_msgs opencv_candidate
-                             pcl_ros pluginlib rosconsole roscpp shape_msgs sql_database tf)
+                             pcl_ros pluginlib rosconsole roscpp shape_msgs sql_database tf
+                             pcl_conversions sensor_msgs)
 catkin_package(INCLUDE_DIRS include)
 
 # deal with Python

@@ -2,7 +2,7 @@
 
 find_package(genmsg)
 if (genmsg_FOUND)
-  SET(TABLETOP_ROS_CELLS TableMsgAssembler.cpp TableVisualizationMsgAssembler.cpp)
+  SET(TABLETOP_ROS_CELLS TableMsgAssembler.cpp TableVisualizationMsgAssembler.cpp ClusterConverter.cpp)
 endif()
 
 include_directories(SYSTEM ${catkin_INCLUDE_DIRS}
@@ -15,6 +15,7 @@ ectomodule(tabletop_table DESTINATION ${PROJECT_NAME}/ecto_cells
   module.cpp
   TableDetector.cpp
   TablePose.cpp
+  ClusterConverter.cpp
   ${TABLETOP_ROS_CELLS}
 )
 
