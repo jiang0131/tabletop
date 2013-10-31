@@ -45,8 +45,6 @@ struct ClusterConverter {
     std_msgs::Header message_header;
     message_header.frame_id = frame_id;
 
-    std::cout << "!!! Image Message Header Frame ID: " << frame_id << std::endl;
-
     convertCluster((*clusters3d_), message_header, cloud_pc2);
 
     outputs["cluster_pc"] << sensor_msgs::PointCloud2ConstPtr(new sensor_msgs::PointCloud2(cloud_pc2));

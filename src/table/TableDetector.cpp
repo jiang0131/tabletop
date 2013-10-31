@@ -109,7 +109,7 @@ namespace tabletop
   {
     clouds_hull_->clear();
     table_coefficients_->clear();
-    if (!filter_planes_ || tf_->waitForTransform(robot_frame_id_, sensor_frame_id_, ros::Time(0), ros::Duration(0.5)))
+    if (!filter_planes_ || tf_->waitForTransform(robot_frame_id_, sensor_frame_id_, ros::Time(0), ros::Duration(2))) //change wait time to 2s
     {
       if ((points3d_->rows != prev_image_rows_) || (points3d_->cols != prev_image_cols_))
       {
